@@ -49,6 +49,9 @@ vim.keymap.set("n", "<leader>ll", function()
   vim.lsp.codelens.enable(enable)
 end, { remap = true, desc = "Enable lsp codelens" })
 
+-- nimble
+vim.keymap.set("n", "<leader>NN", "<cmd>NimbleAPI<CR>", { desc = "NimbleAPI" })
+
 -- Telescope
 vim.keymap.set(
   "n",
