@@ -42,6 +42,13 @@ vim.keymap.set("n", "<leader>bl", "<cmd>BufferLineMoveNext<CR>", { desc = "Move 
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz")
 -- vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- codelens
+vim.keymap.del("n", "<leader>l")
+vim.keymap.set("n", "<leader>ll", function()
+  local enable = not vim.lsp.codelens.is_enabled()
+  vim.lsp.codelens.enable(enable)
+end, { remap = true, desc = "Enable lsp codelens" })
+
 -- Telescope
 vim.keymap.set(
   "n",
