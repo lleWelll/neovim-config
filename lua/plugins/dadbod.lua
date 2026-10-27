@@ -6,7 +6,6 @@ return {
   },
   lazy = true,
   cmd = { "DBUI" },
-  ft = { "sql" },
 
   init = function()
     -- 'Describe' helper to show table's information
@@ -24,7 +23,7 @@ return {
     local okup_dev_redis = "redis://worker4-k8s.alseco.kz:31830"
     local okup_tst_redis = "redis://worker4-k8s.alseco.kz:31831"
 
-    vim.g.db = okup_dev_pg --default connection
+    -- vim.g.db = okup_dev_pg --default connection
     vim.g.dev = okup_dev_pg
     vim.g.tst = okup_tst_pg
     vim.g.redis_dev = okup_dev_redis
