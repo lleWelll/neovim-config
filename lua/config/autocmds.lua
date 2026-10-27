@@ -37,6 +37,20 @@ vim.api.nvim_create_autocmd({ "ColorScheme" }, {
     vim.api.nvim_set_hl(0, "NeoTreeDirectoryIcon", { link = "SnacksPicker" })
     vim.api.nvim_set_hl(0, "NeoTreeGitConflict", { bold = true, fg = "#CD0300", italic = true })
 
+    -- Snacks dashboard text, icons and key hints
+    for _, g in ipairs({
+      "SnacksDashboardHeader",
+      "SnacksDashboardIcon",
+      "SnacksDashboardKey",
+      "SnacksDashboardDesc",
+      "SnacksDashboardFile",
+      "SnacksDashboardDir",
+      "SnacksDashboardFooter",
+      "SnacksDashboardSpecial",
+    }) do
+      vim.api.nvim_set_hl(0, g, { fg = "#ADADAD" })
+    end
+
     -- MiniIcons
     vim.api.nvim_set_hl(0, "MiniIconsBlue", { fg = "#82AAFF" })
 
