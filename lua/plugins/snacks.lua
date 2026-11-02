@@ -7,6 +7,16 @@ return {
     { "<leader>fb", false },
   },
   opts = {
+    scroll = {
+      enabled = true,
+      animate = {
+        duration = {
+          step = 10,
+          total = 350,
+        },
+        easing = "linear",
+      },
+    },
     picker = {
       icons = {
         git = {
